@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1><p>세현이와 함께 미래를 설게하세요</p>
+    <p>① 다음의 회원정보를 입력하여 주시면 가입절차가 완료됩니다.</p>
+    <p>② 허위로 작성된 가입정보일 경우 임의로 삭제처리 될 수 있으니 주의해주세요.</p>
+    <br><br><br><br>
+
+    <div class="wrap">
+        <label for="name">이름(실명)</label><input type="text" id="name"> <br><br>
+        <label for="birth">생년월일</label> <input type="date" id="year">
+        <label for="solar">양력</label><input type="radio" name="slbrith"
+        id="slbrith" value="양력">
+        <label for="luna">음력</label><input type="radio" name="slbrith"
+        id="slbrith" value="음력"> <br><br>
+        <label for="id">회원ID</label><input type="text" id="id"><input type="button" value="ID 중복확인"><br>
+        <p>회원ID는 가입 후 변경이 불가능 합니다.</p>
+        <p>회원ID와 비밀번호는 4~18자의 영문, 숫자 조합셔서서 공백없이해라</p> 
+        <label for="pw">비밀번호</label><input type="text" id="pw"><label for="repw">재입력</label>
+        <input type="text" id="pw"><br><br>
+        <label for="email">이메일</label><input type="email" id="email"><input type="checkbox" name="공지메일 받음" id="mail">
+        <label for="mail">공지메일 받음</label>
+
+        
+    </div>
+    
+</body>
+</html>
