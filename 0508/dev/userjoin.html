@@ -1,33 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
 </head>
 <body>
-    <h1>회원가입</h1><p>세현이와 함께 미래를 설게하세요</p>
+
+    <h1>회원가입</h1>
     <p>① 다음의 회원정보를 입력하여 주시면 가입절차가 완료됩니다.</p>
     <p>② 허위로 작성된 가입정보일 경우 임의로 삭제처리 될 수 있으니 주의해주세요.</p>
-    <br><br><br><br>
+
+    <br><br>
 
     <div class="wrap">
-        <label for="name">이름(실명)</label><input type="text" id="name"> <br><br>
-        <label for="birth">생년월일</label> <input type="date" id="year">
-        <label for="solar">양력</label><input type="radio" name="slbrith"
-        id="slbrith" value="양력">
-        <label for="luna">음력</label><input type="radio" name="slbrith"
-        id="slbrith" value="음력"> <br><br>
-        <label for="id">회원ID</label><input type="text" id="id"><input type="button" value="ID 중복확인"><br>
-        <p>회원ID는 가입 후 변경이 불가능 합니다.</p>
-        <p>회원ID와 비밀번호는 4~18자의 영문, 숫자 조합셔서서 공백없이해라</p> 
-        <label for="pw">비밀번호</label><input type="text" id="pw"><label for="repw">재입력</label>
-        <input type="text" id="pw"><br><br>
-        <label for="email">이메일</label><input type="email" id="email"><input type="checkbox" name="공지메일 받음" id="mail">
-        <label for="mail">공지메일 받음</label>
 
-        
+        <div>
+            <label for="name">이름(실명)</label>
+            <input type="text" id="name">
+        </div><br>
+
+        <div>
+            <label for="birth">생년월일</label>
+            <input type="date" id="birth">
+            <input type="radio" name="calendar" id="solar" value="양력">
+            <label for="solar">양력</label>
+            <input type="radio" name="calendar" id="lunar" value="음력">
+            <label for="lunar">음력</label>
+        </div><br>
+
+        <div>
+            <label for="userid">회원ID</label>
+            <input type="text" id="userid">
+            <input type="button" value="ID 중복확인"><br>
+            <small>회원ID는 가입 후 변경이 불가능합니다.</small><br>
+            <small>회원ID와 비밀번호는 4~18자의 영문, 숫자를 조합하여 공백 없이 입력해주세요.</small>
+        </div><br>
+
+        <div>
+            <label for="pw">비밀번호</label>
+            <input type="password" id="pw">
+        </div><br>
+
+        <div>
+            <label for="repw">재입력</label>
+            <input type="password" id="repw">
+        </div><br>
+
+     
+        <div>
+            <label for="email">이메일</label>
+            <input type="email" id="email">
+            <input type="checkbox" id="mail">
+            <label for="mail">공지메일 받음</label>
+        </div><br>
+
+        <div>
+            <label>자택전화</label>
+            <select>
+                <option>02</option>
+                <option>031</option>
+                <option>051</option>
+            </select> -
+            <input type="text" size="4"> -
+            <input type="text" size="4">
+        </div><br>
+        <div>
+            <label>휴대폰</label>
+            <select>
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+            </select> -
+            <input type="text" size="4"> -
+            <input type="text" size="4">
+            <input type="checkbox" id="sms">
+            <label for="sms">상담전화와 문자메세지를 받음</label>
+        </div><br>
+
+        <div>
+            <label for="address">자택주소</label>
+            <input type="text" id="address">
+            <input type="button" value="우편번호 검색">
+        </div><br>
+       <div>
+            <label for="job">직업</label>
+            <input type="text" id="job">
+        </div><br>
+
+        <div>
+            <label>가입경로</label><br>
+            <input type="radio" name="route" value="알바몬" id="albam">
+            <label for="albam">알바몬</label>
+
+            <input type="radio" name="route" value="알바천국" id="heaven">
+            <label for="heaven">알바천국</label>
+
+            <input type="radio" name="route" value="인쿠르트" id="incruit">
+            <label for="incruit">인쿠르트</label>
+
+            <input type="radio" name="route" value="잡코리아" id="jobkorea">
+            <label for="jobkorea">잡코리아</label><br><br>
+
+            <input type="checkbox" id="naver">
+            <label for="naver">네이버검색</label>
+
+            <input type="checkbox" id="daum">
+            <label for="daum">다음검색</label>
+
+            <input type="checkbox" id="cafe">
+            <label for="cafe">카페</label>
+
+            <input type="checkbox" id="blog">
+            <label for="blog">블로그</label><br><br>
+
+            기타: <input type="text" size="30">
+        </div><br>
+
+        <div>
+            <button type="submit">회원가입</button>
+            <button type="reset">취소</button>
+        </div>
+
     </div>
-    
+
+    <hr><br>
+    <h2>로그인</h2>
+    <form>
+        <div>
+            <label for="login-id">아이디</label>
+            <input type="text" id="login-id" placeholder="6자~12자">
+        </div><br>
+
+        <div>
+            <label for="login-pw">비밀번호</label>
+            <input type="password" id="login-pw" placeholder="영문, 특수문자, 숫자 조합 8~12자">
+        </div><br>
+
+        <div>
+            <input type="checkbox" id="save-id">
+            <label for="save-id">아이디 저장</label>
+        </div><br>
+
+        <div>
+            <button type="submit">로그인</button>
+        </div><br>
+
+        <div>
+            <a href="#">아이디 찾기</a> |
+            <a href="#">비밀번호 찾기</a> |
+            <a href="#">회원가입</a>
+        </div>
+    </form>
+
 </body>
 </html>
